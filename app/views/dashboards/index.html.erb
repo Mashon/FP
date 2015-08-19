@@ -1,0 +1,43 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1 class="my_dashboard">Hello User</h1>
+<p>Please select your dashboard!</p>
+
+
+<h2>Dashboards</h2>
+
+  <div class="dashboard_list">
+    <% @dashboards.each do |dashboard| %>
+
+  <div class="tab">
+    <div class="dashboard_title">
+        <%= dashboard.title %>
+    </div>
+
+
+        <%= link_to 'Show', dashboard, class:"dashboard_links" %>
+        <%= link_to 'Edit', edit_dashboard_path(dashboard), class:"dashboard_links" %>
+        <%= link_to 'Destroy', dashboard, method: :delete, data: { confirm: 'Are you sure?' }, class:"dashboard_links" %></p>
+  </div>
+  <br>
+  <% end %>
+
+</div>
+
+
+
+
+
+<div class="tab_new_dashboard">
+<p class="new_dashboard"><%= link_to 'New Dashboard', new_dashboard_path %></p>
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
